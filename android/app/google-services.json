@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "456055223160",
+    "project_id": "chat-c2b92",
+    "storage_bucket": "chat-c2b92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456055223160:android:ba8a67cf562b76b458ce8d",
+        "android_client_info": {
+          "package_name": "br.com.ciolfi.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456055223160-moogtv60tnkbji1u6o6l41jrop27uksl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ciolfi.chat",
+            "certificate_hash": "d4329032580b85f438eb6c7f7a35c1b138eb9b48"
+          }
+        },
+        {
+          "client_id": "456055223160-7mvbjv7kjpb515dk5mv9ov2vbqrqb4d8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM0bGZdphTjxZZARQNdWkoXEDH2N-U-b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456055223160-7mvbjv7kjpb515dk5mv9ov2vbqrqb4d8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
