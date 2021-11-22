@@ -1,8 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:chat/chatScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
-  Firestore.instance.collection("col").document("doc").setData({"texto":  "teste"});
   runApp(MyApp());
 }
 
@@ -13,9 +12,12 @@ class MyApp extends StatelessWidget {
       title: 'Chat Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
+        iconTheme: IconThemeData(
+          color: Colors.deepPurpleAccent
+        )
       ),
-      home: Container(),
+      home: ChatScreen(),
     );
   }
 }
