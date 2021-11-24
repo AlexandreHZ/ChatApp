@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:io';
 import 'package:chat/text_composer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -6,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'chat_message.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -46,7 +46,7 @@ class _ChatScreenState extends State<ChatScreen> {
       final AuthResult authResult =
         await FirebaseAuth.instance.signInWithCredential(credential);
 
-      final FirebaseUser user = authResult.user;
+      FirebaseUser user = authResult.user;
 
       return user;
 
@@ -110,14 +110,11 @@ class _ChatScreenState extends State<ChatScreen> {
                       );
                     default:
                       List<DocumentSnapshot> documents = snapshot.data.documents;
-
                       return ListView.builder(
                         itemCount: documents.length,
                         reverse: true,
                         itemBuilder: (context, index) {
-                          return ListTile(
-                            title: Text(documents[index].data['text']),
-                          );
+                          return ChatMessage(documents[index].data, true);
                         }
                       );
                   }
