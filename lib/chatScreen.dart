@@ -20,7 +20,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   FirebaseUser _currentUser;
 
-  bool _isLoading;
+  bool _isLoading = false;
 
   @override
   void initState() {
@@ -107,7 +107,7 @@ class _ChatScreenState extends State<ChatScreen> {
       key: _scaffoldKey,
       appBar: AppBar(
         title: Text(
-          _currentUser != null ? 'Olá ${_currentUser.displayName}' : 'Chat App'
+          _currentUser != null ? 'Olá, ${_currentUser.displayName}' : 'Chat App'
         ),
         centerTitle: true,
         elevation: 0,

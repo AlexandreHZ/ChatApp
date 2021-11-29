@@ -27,8 +27,8 @@ class ChatMessage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: mine ? CrossAxisAlignment.end : CrossAxisAlignment.start,
                 children: <Widget>[
-                  data['imageUrl'] != null ?
-                      Image.network(data['imageUrl'], width: 250)
+                  data['imgUrl'] != null ?
+                      Image.network(data['imgUrl'], width: 250)
                       :
                       Text(
                         data['text'],
